@@ -1,12 +1,7 @@
 import pyautogui
-from PIL import Image
 import webbrowser
 import time 
 import sys
-
-# while True: #Start loop
-#     print (pyautogui.position())
-#     time.sleep(1)
 
 url = sys.argv[1]
 isEqual = sys.argv[2]
@@ -14,18 +9,19 @@ isPlus = sys.argv[3]
 isFirstHalf = sys.argv[4]
 isHome = sys.argv[5]
 
+# while True: #Start loop
+#     print (pyautogui.position())
+#     time.sleep(1)
+
 webbrowser.get('google-chrome').open(url)
 time.sleep(5)
 
 # # CLICA NO LOGIN
-pyautogui.click(3232, 222)
+pyautogui.click(pyautogui.center(pyautogui.locateOnScreen('images/LOGIN.png',confidence=0.7)))
+# pyautogui.click(3232, 222)
 time.sleep(3)
 # #  LOGAR
-pyautogui.click(2244, 300, clicks=2)
-pyautogui.typewrite("usuario")
-time.sleep(1)
-pyautogui.press("tab")
-pyautogui.typewrite("senha")
+pyautogui.typewrite("F#carioca7")
 time.sleep(1)
 pyautogui.press("enter")
 time.sleep(6)
@@ -54,15 +50,20 @@ else:
 
 
 
-
 ## CLICA NA APOSTA
 pyautogui.click()
 time.sleep(1)
+
+
 ## REALIZA A APOSTA
-pyautogui.click(2173, 1014)
+pyautogui.click(pyautogui.center(pyautogui.locateOnScreen('images/VALOR_APOSTA.png',confidence=0.7)))
 pyautogui.typewrite("1")
 time.sleep(1)
-pyautogui.click(2475, 1005)
+
+try:
+    pyautogui.click(pyautogui.center(pyautogui.locateOnScreen('images/FAZER_APOSTA.png',confidence=0.7)))
+except:
+    pyautogui.click(pyautogui.center(pyautogui.locateOnScreen('images/ACEITAR_E_FAZER_APOSTA.png',confidence=0.7)))
 
 
 # while True: #Start loop
