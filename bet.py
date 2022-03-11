@@ -12,7 +12,7 @@ def open_chrome(url):
     time.sleep(7)
 
 def login(password):
-    pyautogui.click(1883, 211)
+    pyautogui.click(3231, 214)
     time.sleep(3)
     pyautogui.typewrite(password)
     time.sleep(1)
@@ -33,7 +33,7 @@ def select_bet(isEqual, isPlus, isFirstHalf, isHome):
     else:
         select_limit(isFirstHalf)
     pyautogui.click()
-    time.sleep(1)
+    time.sleep(2)
 
 def select_race(isHome):
     pyautogui.moveTo(pyautogui.center(pyautogui.locateOnScreen('images/RACE.png',confidence=0.7)))

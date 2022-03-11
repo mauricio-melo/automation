@@ -7,7 +7,6 @@ isPlus = sys.argv[3]
 isFirstHalf = sys.argv[4]
 isHome = sys.argv[5]
 
-
 bet.open_chrome(url)
 bet.login("F#carioca7")
 bet.corner_tab()
